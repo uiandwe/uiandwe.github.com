@@ -2,116 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45dd5f03-0b0f-4fc4-bbce-6b91bbd0e999" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/dfxp/dfxp_files/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/dfxp/dfxp_files/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/dfxp/dfxp_files/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/dfxp/dfxp_files/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/dfxp/dfxp_files/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/dfxp/dfxp_files/jquery.scrollex.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/dfxp/dfxp_files/jquery.scrolly.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/dfxp/dfxp_files/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/dfxp/dfxp_files/project.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/dfxp/dfxp_files/project.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/dfxp/dfxp_files/skel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/dfxp/dfxp_files/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/enbloom/enbloom_files/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/enbloom/enbloom_files/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/enbloom/enbloom_files/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/enbloom/enbloom_files/enbloom.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/enbloom/enbloom_files/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/enbloom/enbloom_files/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/enbloom/enbloom_files/jquery.scrollex.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/enbloom/enbloom_files/jquery.scrolly.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/enbloom/enbloom_files/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/enbloom/enbloom_files/project.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/enbloom/enbloom_files/project.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/enbloom/enbloom_files/skel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/enbloom/enbloom_files/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/gramo/gramo_files/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/gramo/gramo_files/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/gramo/gramo_files/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/gramo/gramo_files/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/gramo/gramo_files/gramo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/gramo/gramo_files/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/gramo/gramo_files/jquery.scrollex.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/gramo/gramo_files/jquery.scrolly.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/gramo/gramo_files/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/gramo/gramo_files/project.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/gramo/gramo_files/project.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/gramo/gramo_files/skel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/gramo/gramo_files/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/idst/idst_files/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/laughingbeans/laughingbeans_files/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/laughingbeans/laughingbeans_files/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/laughingbeans/laughingbeans_files/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/laughingbeans/laughingbeans_files/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/laughingbeans/laughingbeans_files/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/laughingbeans/laughingbeans_files/jquery.scrollex.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/laughingbeans/laughingbeans_files/jquery.scrolly.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/laughingbeans/laughingbeans_files/laughingbeans.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/laughingbeans/laughingbeans_files/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/laughingbeans/laughingbeans_files/project.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/laughingbeans/laughingbeans_files/project.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/laughingbeans/laughingbeans_files/skel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/laughingbeans/laughingbeans_files/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/people/people_files/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/people/people_files/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/people/people_files/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/people/people_files/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/people/people_files/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/people/people_files/jquery.scrollex.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/people/people_files/jquery.scrolly.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/people/people_files/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/people/people_files/people.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/people/people_files/project.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/people/people_files/project.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/people/people_files/skel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/people/people_files/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/pongift/portfolio_files/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/pongift/portfolio_files/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/pongift/portfolio_files/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/pongift/portfolio_files/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/pongift/portfolio_files/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/pongift/portfolio_files/jquery.scrollex.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/pongift/portfolio_files/jquery.scrolly.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/pongift/portfolio_files/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/pongift/portfolio_files/nodejslogo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/pongift/portfolio_files/project.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/pongift/portfolio_files/project.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/pongift/portfolio_files/skel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/pongift/portfolio_files/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/postype/postype_files/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/postype/postype_files/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/postype/postype_files/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/postype/postype_files/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/postype/postype_files/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/postype/postype_files/jquery.scrollex.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/postype/postype_files/jquery.scrolly.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/postype/postype_files/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/postype/postype_files/project.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/postype/postype_files/project.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/postype/postype_files/skel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/postype/postype_files/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/towl/towl_files/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/towl/towl_files/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/towl/towl_files/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/towl/towl_files/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/towl/towl_files/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/towl/towl_files/jquery.scrollex.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/towl/towl_files/jquery.scrolly.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/towl/towl_files/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/towl/towl_files/project.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/towl/towl_files/project.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/towl/towl_files/skel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/towl/towl_files/util.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/dfxp/index.html" afterPath="$PROJECT_DIR$/project/dfxp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/gramo/index.html" afterPath="$PROJECT_DIR$/project/gramo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/laughingbeans/index.html" afterPath="$PROJECT_DIR$/project/laughingbeans/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/people/index.html" afterPath="$PROJECT_DIR$/project/people/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/postype/index.html" afterPath="$PROJECT_DIR$/project/postype/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/sgsg/index.html" afterPath="$PROJECT_DIR$/project/sgsg/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/towl/index.html" afterPath="$PROJECT_DIR$/project/towl/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/enbloom/index.html" afterPath="$PROJECT_DIR$/project/enbloom/index.html" />
     </list>
     <ignored path="uiandwe.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -155,16 +46,6 @@
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/dfxp/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/sgsg/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1123">
@@ -174,11 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/towl/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
               <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/enbloom/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1123">
+              <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -286,7 +177,6 @@
         <option value="$PROJECT_DIR$/project/gramo/gramo_files/project.css" />
         <option value="$PROJECT_DIR$/css/project.css" />
         <option value="$PROJECT_DIR$/project/ims/index.html" />
-        <option value="$PROJECT_DIR$/project/enbloom/index.html" />
         <option value="$PROJECT_DIR$/project/idst/index.html" />
         <option value="$PROJECT_DIR$/project/pongift/index.html" />
         <option value="$PROJECT_DIR$/project/postype/index.html" />
@@ -296,6 +186,7 @@
         <option value="$PROJECT_DIR$/project/laughingbeans/index.html" />
         <option value="$PROJECT_DIR$/project/people/index.html" />
         <option value="$PROJECT_DIR$/project/sgsg/index.html" />
+        <option value="$PROJECT_DIR$/project/enbloom/index.html" />
       </list>
     </option>
   </component>
@@ -919,18 +810,18 @@
       <updated>1535936333469</updated>
       <workItem from="1535936334677" duration="2906000" />
       <workItem from="1536054817819" duration="820000" />
-      <workItem from="1536109986245" duration="4498000" />
+      <workItem from="1536109986245" duration="4585000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8224000" />
+    <option name="totallyTimeSpent" value="8311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2217" y="-337" width="2137" height="1417" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29962194" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29962194" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981133" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1270,14 +1161,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/enbloom/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/dfxp/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -1354,6 +1237,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/enbloom/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1123">
+          <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
           <folding />
         </state>
       </provider>
