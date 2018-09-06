@@ -3959,11 +3959,10 @@
            height: 70px;
            padding: 15px 40px 0 20px;
            background-color: #fff;
-           border-top: 1px solid black;
        }
 
        .cs-style-3 figcaption {
-           border-top: 1px solid black;
+		   border-top: none;
            opacity: 0;
            -webkit-transform: translateY(100%);
            -moz-transform: translateY(100%);
@@ -4087,7 +4086,6 @@
             width: 100%;
             padding: 15px 40px 15px 20px;
             background-color: #fff;
-            border-top: 1px solid black;
         }
         .grid figcaption span {
             position: absolute;
