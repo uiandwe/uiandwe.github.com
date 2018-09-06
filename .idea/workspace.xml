@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45dd5f03-0b0f-4fc4-bbce-6b91bbd0e999" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/project.css" afterPath="$PROJECT_DIR$/css/project.css" />
     </list>
     <ignored path="uiandwe.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,16 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/ims/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="27" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/postype/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -76,11 +65,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="3960" column="34" selection-start-line="3960" selection-start-column="34" selection-end-line="3960" selection-end-column="34" />
+            <state relative-caret-position="443">
+              <caret line="3962" column="0" selection-start-line="3962" selection-start-column="0" selection-end-line="3962" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/project.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="3017" column="24" selection-start-line="3017" selection-start-column="13" selection-end-line="3017" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -101,16 +100,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2280">
               <caret line="152" column="16" selection-start-line="152" selection-start-column="16" selection-end-line="152" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/idst/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -175,7 +164,6 @@
         <option value="$PROJECT_DIR$/project/dfxp/dfxp_files/project.css" />
         <option value="$PROJECT_DIR$/project/enbloom/enbloom_files/project.css" />
         <option value="$PROJECT_DIR$/project/gramo/gramo_files/project.css" />
-        <option value="$PROJECT_DIR$/css/project.css" />
         <option value="$PROJECT_DIR$/project/ims/index.html" />
         <option value="$PROJECT_DIR$/project/idst/index.html" />
         <option value="$PROJECT_DIR$/project/pongift/index.html" />
@@ -188,6 +176,7 @@
         <option value="$PROJECT_DIR$/project/sgsg/index.html" />
         <option value="$PROJECT_DIR$/project/enbloom/index.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/css/project.css" />
       </list>
     </option>
   </component>
@@ -812,12 +801,12 @@
       <workItem from="1535936334677" duration="2906000" />
       <workItem from="1536054817819" duration="820000" />
       <workItem from="1536109986245" duration="4644000" />
-      <workItem from="1536228018199" duration="101000" />
+      <workItem from="1536228018199" duration="233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8471000" />
+    <option name="totallyTimeSpent" value="8603000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2217" y="-337" width="2137" height="1417" extended-state="0" />
@@ -1019,21 +1008,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/projects.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/sgsg/sgsg_files/project.css" />
-    <entry file="file://$PROJECT_DIR$/css/project.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="2817" column="1" selection-start-line="2817" selection-start-column="1" selection-end-line="2817" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/dfxp/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -1123,8 +1098,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="3960" column="34" selection-start-line="3960" selection-start-column="34" selection-end-line="3960" selection-end-column="34" />
+        <state relative-caret-position="443">
+          <caret line="3962" column="0" selection-start-line="3962" selection-start-column="0" selection-end-line="3962" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/projects.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/project.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="3017" column="24" selection-start-line="3017" selection-start-column="13" selection-end-line="3017" selection-end-column="24" />
           <folding />
         </state>
       </provider>
