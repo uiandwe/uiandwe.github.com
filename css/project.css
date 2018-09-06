@@ -3187,7 +3187,7 @@ body.is-loading #header:after {
 	/* Header */
 
 	#header {
-		padding: 5em 0 5em 0 ;
+		padding: 5em 0 15em 0 ;
 		background-attachment: scroll;
 	}
 
@@ -3229,7 +3229,7 @@ body.is-loading #header:after {
 	/* Header */
 
 	#header {
-		padding: 8em 3em 8em 3em ;
+		padding: 5em 3em 15em 3em ;
 	}
 
 	/* Footer */
@@ -3320,7 +3320,7 @@ body.is-loading #header:after {
 	/* Header */
 
 	#header {
-		padding: 4em 3em 4em 3em ;
+		padding: 4em 3em 8em 3em ;
 	}
 
 	#header .actions {
