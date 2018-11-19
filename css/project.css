@@ -3244,6 +3244,23 @@ body.is-loading #header:after {
 		text-align: center;
 	}
 
+	#one div.inner .major ul{
+		display: block;
+	    width: 400px;
+	    margin: auto;
+		
+	}
+
+	#one div.inner .major ul li{
+		list-style: none;
+    	float: left;
+	}	
+
+	#one div.inner .major ul li span{
+		width: 100px;
+    	display: inline-block;
+	}
+
 	/* Two */
 
 	#two {
