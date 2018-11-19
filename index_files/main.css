@@ -4138,7 +4138,10 @@ footer{
     width: 400px;
     margin: auto;
     margin-bottom: 20px
-	
+}
+
+#one div.inner .major ul:after{
+	content:""; clear:both; display:block;
 }
 
 #one div.inner .major ul li{
