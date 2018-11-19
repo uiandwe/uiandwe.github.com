@@ -4149,7 +4149,7 @@ footer{
 	float: left;
 }	
 
-#one div.inner .major ul li span{
+#one div.inner .major ul li span.head{
 	width: 100px;
 	display: inline-block;
 }
