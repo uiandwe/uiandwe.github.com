@@ -14,16 +14,6 @@
 
     <title>박력터진 이력서</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src=""></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-47676781-6');
-    </script> -->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js" integrity="sha384-3ziFidFTgxJXHMDttyPJKDuTlmxJlwbSkojudK/CkRqKDOmeSbN6KLrGdrBQnT2n" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -90,7 +80,7 @@
                   <a href="https://uiandwe.tistory.com" target="_blank">https://uiandwe.tistory.com</a>
                 </div>
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -317,7 +307,7 @@
                   <h4>해줌 (haezoom)</h4>
                   <i class="gray">IT 사업실 백엔드 개발자(프론트겸업)</i>
                   <ul class="pt-3">
-                    <li>생산성 예측 및 솔라맵 제공</li>
+                    <li>태양광 생산성 예측 및 태양광 예측 지도 제공</li>
                     <li><strong>Skill Keywords</strong></li>
                     <div>
                       <span class="badge badge-secondary">Python</span>
@@ -329,7 +319,10 @@
                       <span class="badge badge-secondary">restful API</span>
                       <span class="badge badge-secondary">TDD</span>
                       <span class="badge badge-secondary">Infrastructure Architecture</span>
-                      <span class="badge badge-secondary">CI/CD</span>
+                      <span class="badge badge-secondary">CI/CD (docker/jenkins)</span>
+                      <span class="badge badge-secondary">airflow</span>
+                      <span class="badge badge-secondary">fluentd</span>
+                      <span class="badge badge-secondary">zeppelin</span>
                     </div>
                   </ul>
                 </div>
@@ -431,14 +424,14 @@
 
           <div class="row">
             <div class="col">
-            
+
             <div class="row">
                     <div class="col-md-3 col-12 text-md-right">
                         <h4 class="gray">2019. 03 ~ 2019. 06</h4>
                     </div>
                     <div class="col-md-9 col-12">
                         <h4>발전량 예측 백엔드 개발</h4>
-                        <i class="gray">해줌</i> 
+                        <i class="gray">해줌</i>
                         <ul class="pt-3">
                         <li>
                             <strong>API Server</strong>
@@ -447,10 +440,17 @@
                                 <li>python django / postgresSQL를 사용하여 개발</li>
                                 <li>django_rest_framework를 이용한 restful API 구현</li>
                                 <li>OpenAPI 2.0규격에 맞는 swagger API 문서 작성</li>
-                                <li>CI/CD 구축을 통한 테스트 및 배포 자동화</li>
                             </ul>
                         </li>
-                    </div> 
+                        <li>
+                            <strong>preprocess</strong>
+                            <ul>
+                                <li>CI/CD 구축을 통한 톱합 테스트 및 배포 자동화</li>
+                                <li>Global Forecast System (GFS) 데이터 추출/가공 전처리</li>
+                                <li>천리안2 위성 데이터의 데이터 추출/가공 전처리</li>
+                            </ul>
+                        </li>
+                    </div>
                 </div>
             <hr />
 
@@ -460,7 +460,7 @@
                 </div>
                 <div class="col-md-9 col-12">
                   <h4>쓱싹 백엔드/프론트엔드 개발</h4>
-                  <i class="gray">슬로그업</i> 
+                  <i class="gray">슬로그업</i>
                   <ul class="pt-3">
                     <li>
                       <strong>API Server / View Page</strong>
@@ -574,7 +574,7 @@
                 </div>
               </div>
               <hr />
-            
+
               <div class="row">
                 <div class="col-md-3 col-12 text-md-right">
                   <h4 class="gray">2015. 07 ~ 2015. 09</h4>
