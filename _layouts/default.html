@@ -2,18 +2,16 @@
 <html lang="ko">
 <head>
     <meta charset="utf-8">
-    <!-- [수정] user-scalable=no / maximum-scale 제거 : 모바일 확대 차단은 접근성 위반(WCAG 1.4.4) -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="현승재 | 데이터 엔지니어 이력서. Python, Airflow, Kafka, BigQuery 기반 데이터 파이프라인 설계 및 운영."/>
+    <meta name="description" content="리워드 광고 데이터 플랫폼을 운영하는 데이터 엔지니어 현승재의 이력서"/>
     <meta name="author" content="현승재 (Seungjae Hyeon)"/>
     <meta name="theme-color" content="#2f7fed"/>
     <link rel="canonical" href="https://uiandwe.github.io/"/>
 
-    <!-- [수정] og:url 오타 (github.com -> github.io), og:image 레거시 도메인(avatars2) 정리 -->
     <meta property="og:url" content="https://uiandwe.github.io/"/>
     <meta property="og:site_name" content="현승재 이력서"/>
     <meta property="og:title" content="현승재 | 데이터 엔지니어 이력서"/>
-    <meta property="og:description" content="Python, Airflow, Kafka, BigQuery 기반 데이터 파이프라인 설계 및 운영."/>
+    <meta property="og:description" content="리워드 광고 데이터 플랫폼을 운영하는 데이터 엔지니어 현승재의 이력서"/>
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/3336344?s=460&amp;v=4"/>
     <meta property="og:type" content="profile"/>
     <meta name="twitter:card" content="summary"/>
@@ -22,18 +20,8 @@
 
     <title>현승재 | 데이터 엔지니어 이력서</title>
 
-    <!-- [추가] favicon -->
     <link rel="icon" href="https://avatars.githubusercontent.com/u/3336344?s=64&amp;v=4">
 
-    <!--
-      [수정] CDN 정리
-      - maxcdn.bootstrapcdn.com (종료 예정 도메인) -> cdn.jsdelivr.net
-      - Bootstrap 4.0.0-beta.2(베타, XSS 이슈) -> 4.6.2 (정식 최종)
-      - 모든 외부 리소스에 SRI(integrity) 적용
-      - jQuery / bootstrap.bundle.js 는 완전히 제거했습니다.
-        이 페이지는 JS 컴포넌트(모달/드롭다운/툴팁)를 하나도 쓰지 않아서 필요 없고,
-        jQuery 3.2.1 은 CVE-2019-11358 / CVE-2020-11022 취약 버전이었습니다.
-    -->
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
@@ -43,12 +31,6 @@
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
           crossorigin="anonymous">
 
-    <!--
-      [중요 / 추가] 기존 사이트에는 커스텀 CSS 파일이 아예 없어서
-      .resume / .blue / .gray / .profile-img / .footer-cover 클래스가 전부 무효 상태였습니다.
-      (h2.blue 의 실제 색이 rgb(33,37,41) = 기본 검정이었음)
-      아래 블록으로 복구했습니다. 별도 파일로 빼려면 css/style.css 로 옮기고 link 하세요.
-    -->
     <style>
         :root { --accent: #2f7fed; --muted: #868e96; }
 
@@ -153,12 +135,12 @@
             .row, .cert-item { page-break-inside: avoid; }
             .cert-grid .cert-thumb { height: 130px; border-color: #ddd; }
         }
+        .badge{white-space:normal;text-align:left}
     </style>
 </head>
 <body>
 <div class="container resume">
 
-    <!-- ===================== Profile Start ===================== -->
     <div class="row mt-5">
         <div class="col-md-3 col-sm-12 pb-3 text-md-right text-center">
             <img class="img-fluid rounded profile-img"
@@ -169,7 +151,7 @@
             <div class="row">
                 <div class="col text-center text-md-left">
                     <h1 class="blue">현 승 재</h1>
-                    <p class="gray mb-0">Data Engineer · 데이터 파이프라인 설계 / 운영</p>
+                    <p class="gray mb-0">Data Engineer / Data Platform</p>
                 </div>
             </div>
             <div class="row">
@@ -187,7 +169,6 @@
                             <i class="fa fa-github" aria-hidden="true"></i>
                         </div>
                         <div class="col-auto">
-                            <!-- [수정] target="_blank" 에 rel="noopener noreferrer" 추가 (reverse tabnabbing 방지) -->
                             <a href="https://github.com/uiandwe" target="_blank" rel="noopener noreferrer">https://github.com/uiandwe</a>
                         </div>
                     </div>
@@ -211,690 +192,189 @@
             </div>
         </div>
     </div>
-    <!-- ===================== Profile End ===================== -->
-
-    <!-- ===================== Introduce Start ===================== -->
     <div class="row pt-5">
-        <div class="col-12 col-md-3">
-            <h2 class="blue">INTRODUCE</h2>
-        </div>
+        <div class="col-12 col-md-3"><h2 class="blue">INTRODUCE</h2></div>
         <div class="col-12 col-md-9">
-            <!-- [수정] 시제 혼용 정리 ("개발 했었습니다" / "구축하고 있으며" 가 같은 과거 경력 설명에 섞여 있었음) -->
-            <p>챗봇 서비스 개발 및 운영을 통해 사용자의 자연어 질의를 이해하고 최적의 결과를 제공하는 FAQ 서비스를 개발했습니다. 이를 위해 다양한 LLM 모델 fine tuning과 pgvector 기반 임베딩 시스템을 구축했고, 대규모 텍스트 데이터를 효율적으로 수집 및 전처리하기 위한 데이터 파이프라인을 설계하고 운영했습니다.</p>
-            <p>현재는 NBT에서 데이터 엔지니어로 근무하며 Airflow / Airbyte / dbt / Embulk를 활용해 MySQL 데이터를 BigQuery로 적재하고, Kafka → Elasticsearch → Kibana 및 Redash로 연결되는 로그 수집 및 시각화 파이프라인을 운영하고 있습니다. 또한 광고 성과 지표 대시보드를 구성하고, 이상 징후를 탐지해 Slack과 Google Chat으로 실시간 알림을 전송하는 자동화 시스템을 개발 및 유지보수하고 있습니다.</p>
-            <p>오픈소스 프로젝트에 관심이 많고 다양한 방법으로 기여하려 노력하고 있습니다. 이외에도 개인 프로젝트나 개발 커뮤니티 활동을 통해 다양한 개발 경험을 즐기고 있습니다. 평소 개발 경험을 공유하거나 기록하는 것을 좋아해 학부생 시절부터 개발 블로그에 기술 포스트를 작성해 왔습니다. 앞으로도 재미있고 더 필요한 서비스를 만들어 나가며, 다양한 기술을 학습하고 문제를 해결하면서 개발자로서 발전하기 위해 노력하고 있습니다.</p>
+            <p>리워드 광고 플랫폼에서 <strong>하루 6TB 초당 3800건</strong> 규모의 광고 postback 로그와 서비스 DB 데이터를 수집하고 적재하는 데이터 플랫폼을 운영하고 있습니다. 레거시 배치 잡 <strong>500개</strong>를 성격에 맞춰 배치와 스트리밍으로 나눠 다시 설계했고 BigQuery 비용 이상 탐지와 스토리지 정리로 운영 비용을 줄였습니다.</p>
+            <p>11년 동안 백엔드 개발을 하며 쌓은 API와 인프라 그리고 장애 대응 경험을 데이터 플랫폼 운영으로 넓혀 왔습니다. 새 기술은 직접 측정해서 효과를 확인한 뒤에 도입 여부를 정합니다.</p>
         </div>
     </div>
-    <!-- ===================== Introduce End ===================== -->
-
-    <!-- ===================== Skills Start ===================== -->
     <div class="row pt-5">
         <div class="col">
-            <div class="row pb-3">
-                <div class="col">
-                    <h2 class="blue">SKILLS</h2>
-                </div>
+            <div class="row pb-3"><div class="col"><h2 class="blue">SKILLS</h2></div></div>
+            <div class="row pb-2">
+                <div class="col-12 col-md-3 text-md-right"><h4 class="gray">Data Pipeline</h4></div>
+                <div class="col-12 col-md-9 pt-md-1">Airflow 3 / dbt / Embulk</div>
             </div>
+            <div class="row pb-2">
+                <div class="col-12 col-md-3 text-md-right"><h4 class="gray">Streaming</h4></div>
+                <div class="col-12 col-md-9 pt-md-1">Kafka / Kafka Connect / Debezium / ksqlDB / GCP Pub/Sub</div>
+            </div>
+            <div class="row pb-2">
+                <div class="col-12 col-md-3 text-md-right"><h4 class="gray">Log</h4></div>
+                <div class="col-12 col-md-9 pt-md-1">Vector / Fluentd / Logstash / Elasticsearch / Kibana</div>
+            </div>
+            <div class="row pb-2">
+                <div class="col-12 col-md-3 text-md-right"><h4 class="gray">Storage</h4></div>
+                <div class="col-12 col-md-9 pt-md-1">BigQuery / ClickHouse / PostgreSQL / PostGIS / MySQL / DuckDB</div>
+            </div>
+            <div class="row pb-2">
+                <div class="col-12 col-md-3 text-md-right"><h4 class="gray">Query / BI</h4></div>
+                <div class="col-12 col-md-9 pt-md-1">Trino / Redash / Looker</div>
+            </div>
+            <div class="row pb-2">
+                <div class="col-12 col-md-3 text-md-right"><h4 class="gray">Cloud / Ops</h4></div>
+                <div class="col-12 col-md-9 pt-md-1">GCP / AWS / Cloud SQL / Argo CD / Jenkins</div>
+            </div>
+            <div class="row pb-2">
+                <div class="col-12 col-md-3 text-md-right"><h4 class="gray">Language</h4></div>
+                <div class="col-12 col-md-9 pt-md-1">Python / SQL</div>
+            </div>
+            <div class="row pb-2">
+                <div class="col-12 col-md-3 text-md-right"><h4 class="gray">Backend</h4></div>
+                <div class="col-12 col-md-9 pt-md-1">FastAPI / Django / React</div>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col">
+            <div class="row pb-3"><div class="col"><h2 class="blue">EXPERIENCE</h2></div></div>
 
             <div class="row">
-                <div class="col-12 col-md-3 text-md-right">
-                    <h4 class="gray">Back-end</h4>
+                <div class="col-md-3 col-12 text-md-right">
+                    <h4 class="gray">2025. 03. 25 ~ 현재</h4>
+                    <span class="badge badge-info">근무중</span>
                 </div>
-                <div class="col-12 col-md-9">
-                    <div class="row">
-                        <div class="col-12 col-sm-4">
-                            <ul><li>Python</li></ul>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <ul><li>Django</li></ul>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <ul><li>FastAPI</li></ul>
-                        </div>
-                    </div>
+                <div class="col-md-9 col-12">
+                    <h4>NBT</h4>
+                    <i class="gray">DevOps팀 / 데이터 엔지니어</i>
+                    <p class="pt-2 mb-1">하루 6TB 규모의 광고 postback 로그와 서비스 DB 데이터를 수집하고 적재하는 플랫폼을 운영합니다. 레거시 배치 환경을 다시 설계하고 BigQuery 비용 구조를 개선했습니다.</p>
+                    <ul class="pt-2">
+                        <li>VM에서 GKE로 로그 파이프라인을 옮기는 작업 중 3개 프로젝트를 담당했습니다. Fluentd와 Logstash를 Vector로 통합해 수집기 <strong>재시작률을 90% 줄이고 처리량을 3배</strong> 늘렸습니다</li>
+                        <li>Jenkins 잡 <strong>500개</strong>를 Airflow 배치 250개와 Kafka Connect 스트리밍 250개로 나누고 Elasticsearch 적재도 Logstash에서 Kafka Connect로 옮겼습니다</li>
+                        <li>postback 페이로드가 3배 늘면서 수집기 pod 10개가 1시간에 40번 OOM으로 재시작했습니다. 오토스케일이 걸려 있어도 pod 메모리 한도가 병목이라는 것을 메트릭으로 확인하고 리소스를 128MB에서 512MB로 다시 잡고 읽기 배치를 조정해 안정화했습니다. <strong>데이터 유실은 0건</strong>이었습니다</li>
+                        <li>BigQuery 비용 이상 탐지(비용 상위 쿼리와 예약 쿼리 스캔 변화 그리고 스토리지 사용 주기)와 미사용 스토리지 정리로 <strong>월 운영 비용을 절감</strong>했습니다</li>
+                        <li>BigQuery 쿼리 비용 분석 도구를 혼자 설계하고 개발했습니다(FastAPI와 대시보드를 Cloud Run에 배포). 상위 쿼리를 자동으로 뽑아 튜닝안을 측정하고 결과를 대조합니다. 채택한 쿼리는 <strong>스캔량 99.1%와 실행 시간 90.1%</strong>가 줄었고 결과 차이는 0건이었습니다</li>
+                        <li>Kafka와 ksqlDB로 실시간 알림을 만들어 장애 탐지 시간을 <strong>분 단위에서 초 단위</strong>로 줄였습니다</li>
+                        <li><strong>Skill Keywords</strong>
+                                    <ul class="skill-badges"><li><span class="badge badge-secondary">BigQuery</span> <span class="badge badge-secondary">Kafka</span> <span class="badge badge-secondary">Kafka Connect</span> <span class="badge badge-secondary">Debezium</span> <span class="badge badge-secondary">ksqlDB</span> <span class="badge badge-secondary">GCP Pub/Sub</span> <span class="badge badge-secondary">Airflow 3</span> <span class="badge badge-secondary">dbt</span> <span class="badge badge-secondary">Embulk</span> <span class="badge badge-secondary">ClickHouse</span> <span class="badge badge-secondary">Cloud SQL</span> <span class="badge badge-secondary">Trino</span> <span class="badge badge-secondary">Vector</span> <span class="badge badge-secondary">Fluentd</span> <span class="badge badge-secondary">Logstash</span> <span class="badge badge-secondary">Elasticsearch</span> <span class="badge badge-secondary">Kibana</span> <span class="badge badge-secondary">Redash</span> <span class="badge badge-secondary">Looker</span> <span class="badge badge-secondary">Jenkins</span> <span class="badge badge-secondary">Argo CD</span></li></ul></li>
+                    </ul>
                 </div>
             </div>
             <hr/>
-
             <div class="row">
-                <div class="col-12 col-md-3 text-md-right">
-                    <h4 class="gray">Data / Database</h4>
+                <div class="col-md-3 col-12 text-md-right">
+                    <h4 class="gray">2022. 09. 05 ~ 2024. 10. 22</h4>
+                    <span class="badge badge-info">2년 2개월</span>
                 </div>
-                <div class="col-12 col-md-9">
-                    <div class="row">
-                        <div class="col-12 col-sm-4">
-                            <ul>
-                                <li>PostgreSQL / PostGIS</li>
-                                <li>Elasticsearch</li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <ul>
-                                <li>MySQL / MariaDB</li>
-                                <li>Kafka / Kafka Connect / ksqlDB</li>
-                                <li>Debezium / GCP Pub/Sub</li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <ul>
-                                <li>BigQuery / Trino</li>
-                                <li>Airflow / dbt / Airbyte</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="col-md-9 col-12">
+                    <h4>신세계 이마트 DT / 신세계 아이앤씨</h4>
+                    <i class="gray">상담 챗봇 서비스 / Back-End Engineer</i>
+                    <p class="pt-2 mb-1">이마트와 트레이더스 그리고 노브랜드 상담 챗봇의 API 서버와 데이터 파이프라인을 담당했습니다.</p>
+                    <ul class="pt-2">
+                        <li>BERT 학습 기반 구조를 vector embedding과 LLM 검색 구조로 바꿔 <strong>주 60시간의 GPU 학습 자원을 없앴고</strong> 새 데이터를 학습 없이 바로 반영할 수 있게 했습니다</li>
+                        <li>챗봇 API를 개발하고 운영했습니다(<strong>MAU 50만</strong>). MLOps와 CI/CD를 구축해 <strong>배포 시간을 80% 줄였습니다</strong></li>
+                        <li>상담 분류와 욕설 탐지 모델을 적용해 상담사 업무를 <strong>7 M/M 줄였습니다</strong></li>
+                        <li>챗봇과 채팅 그리고 음성 상담 데이터 파이프라인과 분석 대시보드를 만들었습니다(하루 평균 1만 건)</li>
+                        <li><strong>Skill Keywords</strong>
+                                    <ul class="skill-badges"><li><span class="badge badge-secondary">Python</span> <span class="badge badge-secondary">FastAPI</span> <span class="badge badge-secondary">PostgreSQL</span> <span class="badge badge-secondary">BigQuery</span> <span class="badge badge-secondary">Airflow</span> <span class="badge badge-secondary">AWS</span> <span class="badge badge-secondary">Argo CD</span> <span class="badge badge-secondary">LLM / Vector Embedding</span></li></ul></li>
+                    </ul>
                 </div>
             </div>
             <hr/>
-
             <div class="row">
-                <div class="col-12 col-md-3 text-md-right">
-                    <h4 class="gray">Etc</h4>
+                <div class="col-md-3 col-12 text-md-right">
+                    <h4 class="gray">2019. 03. 04 ~ 2022. 09. 03</h4>
+                    <span class="badge badge-info">3년 7개월</span>
                 </div>
-                <div class="col-12 col-md-9">
-                    <div class="row">
-                        <div class="col-12 col-sm-4">
-                            <ul>
-                                <li>CI/CD</li>
-                                <li>Git / GitHub</li>
-                                <li>Refactoring</li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <ul>
-                                <li>Jira / Trello</li>
-                                <li>Agile / Sprint / Scrum</li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-sm-4">
-                            <ul>
-                                <!-- [수정] "Security Infomation" 오타 -->
-                                <li>Information Security</li>
-                                <li>Math + Graph + 2D/3D</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="col-md-9 col-12">
+                    <h4>해줌 (Haezoom)</h4>
+                    <i class="gray">태양광 발전량 예측 서비스 / Back-End Engineer</i>
+                    <p class="pt-2 mb-1">미국과 유럽 그리고 한국의 기상 데이터 전처리 파이프라인과 발전량 예측 API를 담당했습니다.</p>
+                    <ul class="pt-2">
+                        <li>기상 데이터 파이프라인을 구축해 <strong>하루 250GB</strong>의 이미지를 처리했고 데이터와 모델 테스트로 지점별 장애를 줄였습니다</li>
+                        <li>PostGIS 쿼리를 튜닝해 지리 검색 속도를 <strong>50배</strong> 높였습니다</li>
+                        <li>발전량 예측 API와 RE100 경영 관리 API를 개발하고 운영했습니다. 예측 경진대회에서 2020년과 2021년에 우승했습니다</li>
+                        <li><strong>Skill Keywords</strong>
+                                    <ul class="skill-badges"><li><span class="badge badge-secondary">Python</span> <span class="badge badge-secondary">Django</span> <span class="badge badge-secondary">PostgreSQL</span> <span class="badge badge-secondary">PostGIS</span> <span class="badge badge-secondary">AWS</span> <span class="badge badge-secondary">Airflow</span> <span class="badge badge-secondary">Jenkins</span> <span class="badge badge-secondary">Docker</span></li></ul></li>
+                    </ul>
                 </div>
             </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-3 col-12 text-md-right">
+                    <h4 class="gray">2016. 10. 01 ~ 2018. 09. 30</h4>
+                    <span class="badge badge-info">2년</span>
+                </div>
+                <div class="col-md-9 col-12">
+                    <h4>슬로그업 (Slogup)</h4>
+                    <i class="gray">가전 설치 견적 커머스 / Back-End / Front-End Engineer</i>
+                    
+                    <ul class="pt-2">
+                        <li>사내 프로젝트를 정식 서비스로 키우면서 견적과 결제 그리고 어드민과 블로그 자동화 시스템을 개발했습니다</li>
+                        <li><strong>Skill Keywords</strong>
+                                    <ul class="skill-badges"><li><span class="badge badge-secondary">Node.js</span> <span class="badge badge-secondary">AngularJS</span> <span class="badge badge-secondary">MariaDB</span> <span class="badge badge-secondary">MongoDB</span> <span class="badge badge-secondary">AWS</span></li></ul></li>
+                    </ul>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-3 col-12 text-md-right">
+                    <h4 class="gray">2014. 07. 09 ~ 2016. 03</h4>
+                    <span class="badge badge-info">1년 9개월</span>
+                </div>
+                <div class="col-md-9 col-12">
+                    <h4>씸플 (Cimple)</h4>
+                    <i class="gray">블로그 플랫폼 포스타입 / Back-End / Front-End Engineer</i>
+                    
+                    <ul class="pt-2">
+                        <li>서비스 API와 User-Based Collaborative Filtering 기반 포스트 추천 기능을 개발했습니다</li>
+                        <li><strong>Skill Keywords</strong>
+                                    <ul class="skill-badges"><li><span class="badge badge-secondary">PHP</span> <span class="badge badge-secondary">Phalcon</span> <span class="badge badge-secondary">MariaDB</span> <span class="badge badge-secondary">AWS</span></li></ul></li>
+                    </ul>
+                </div>
+            </div>
+            <hr/>
         </div>
     </div>
-    <!-- ===================== Skills End ===================== -->
-
-    <!-- ===================== Experience Start ===================== -->
     <div class="row pt-5">
         <div class="col">
-            <div class="row pb-3">
-                <div class="col">
-                    <h2 class="blue">EXPERIENCE</h2>
-                </div>
-            </div>
+            <div class="row pb-3"><div class="col"><h2 class="blue">PROJECTS</h2></div></div>
 
             <div class="row">
-                <div class="col">
-
-                    <!-- NBT -->
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <div class="row">
-                                <div class="col-md-12 col">
-                                    <h4 class="gray">2025. 03. 25 ~ 현재</h4>
-                                </div>
-                                <div class="col-md-12 col-3 text-center text-md-right">
-                                    <span class="badge badge-info">근무중</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>NBT</h4>
-                            <i class="gray">DevOps팀 / 데이터 엔지니어</i>
-                            <ul class="pt-3">
-                                <li>일 6TB · 초당 3,800건 규모 광고 postback 로그와 서비스 DB 데이터의 수집·적재 플랫폼 운영 (국내/해외 10개국)</li>
-                                <li>VM → GKE 로그 파이프라인 이관 중 3개 프로젝트 담당. Fluentd · Logstash를 Vector로 통합해 수집기 재시작률 90% 감소, 처리량 3배 향상</li>
-                                <li>Logstash 기반 Elasticsearch 적재를 Kafka Connect로 전환. 필드 구조 변환이 필요한 일부 로그는 비용·속도 비교 후 Logstash 유지</li>
-                                <li>Jenkins 잡 500개를 성격별로 분리: MySQL → BigQuery 배치 250개는 Airflow로, 로그 적재 250개는 Kafka Connect 스트리밍으로 이관</li>
-                                <li>postback 페이로드 3배 급증으로 수집기 pod 10개가 1시간에 40회 OOM 재시작. 오토스케일 적용 상태에서도 pod 메모리 한도가 병목임을 메트릭으로 규명하고 리소스 재산정(128MB → 512MB)과 읽기 배치 조정으로 안정화, 데이터 유실 0건</li>
-                                <li>Kafka Connect 커스텀 Sink(Java 11) 개발로 로그를 GCS Parquet로 적재, Kafka → ClickHouse 실시간 적재 구축(칩스)</li>
-                                <li>BigQuery 비용 이상 탐지(비용 상위 쿼리, 예약 쿼리 스캔 변화, 스토리지 사용 주기)와 미사용 스토리지 정리로 월 운영 비용 절감</li>
-                                <li>BigQuery 쿼리 비용 분석 도구 단독 개발: 상위 쿼리 자동 추출 → 튜닝안 측정·결과 대조. 채택 쿼리 스캔 −99.1%, 실행 시간 −90.1%, 결과 차이 0건</li>
-                                <li>Airflow 2 → 3 업그레이드 및 메타 DB Cloud SQL Postgres 이전. 잡 단위 DAG를 프로젝트당 1개로 재구성해 DAG 63개(task 535개)로 통합</li>
-                                <li>Kafka + ksqlDB 실시간 알림으로 장애 탐지 지연 분 → 초 단위 단축</li>
-                                <li>Spark 적재 레이어 도입을 PoC로 검토, 해당 규모에서 비용 대비 효과가 낮아 BigQuery 중심 구조 유지</li>
-                                <li>DataHub 1년 운영 후 낮은 사용 빈도와 BigQuery 메타데이터 규모 대비 리소스 한계를 확인하고 운영 종료</li>
-                                <li>관련 업체 [네이버 웹툰 / 네이버 페이 / 토스 / 탭조이 / 리디 / 배민 등]</li>
-                                <li><strong>Skill Keywords</strong>
-                                    <ul class="skill-badges">
-                                        <li>
-                                            <span class="badge badge-secondary">BigQuery</span>
-                                            <span class="badge badge-secondary">Kafka / Kafka Connect / ksqlDB</span>
-                                            <span class="badge badge-secondary">Debezium</span>
-                                            <span class="badge badge-secondary">GCP Pub/Sub</span>
-                                            <span class="badge badge-secondary">Airflow 3 / dbt / Airbyte</span>
-                                            <span class="badge badge-secondary">Embulk</span>
-                                            <span class="badge badge-secondary">Java</span>
-                                            <span class="badge badge-secondary">ClickHouse</span>
-                                            <span class="badge badge-secondary">Cloud SQL</span>
-                                            <span class="badge badge-secondary">Jenkins</span>
-                                            <span class="badge badge-secondary">MySQL</span>
-                                            <span class="badge badge-secondary">Redash</span>
-                                            <span class="badge badge-secondary">Trino</span>
-                                            <span class="badge badge-secondary">DataHub</span>
-                                            <span class="badge badge-secondary">logrotate</span>
-                                            <span class="badge badge-secondary">Vector</span>
-                                            <span class="badge badge-secondary">Fluentd</span>
-                                            <span class="badge badge-secondary">Logstash</span>
-                                            <span class="badge badge-secondary">Elasticsearch / Kibana</span>
-                                            <span class="badge badge-secondary">CI/CD (Docker / GitHub Actions / Azure Pipeline / ArgoCD)</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
-                    <!-- 신세계 -->
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <div class="row">
-                                <div class="col-md-12 col">
-                                    <h4 class="gray">2022. 09. 05 ~ 2024. 10. 22</h4>
-                                </div>
-                                <div class="col-md-12 col-3 text-center text-md-right">
-                                    <span class="badge badge-info">2년 2개월</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>신세계 이마트 DT / 신세계 아이앤씨</h4>
-                            <i class="gray">프로덕트팀 백엔드 / MLOps 개발자</i>
-                            <ul class="pt-3">
-                                <li>이마트 / 트레이더스 / 노브랜드 FAQ 챗봇 개발 및 MLOps 운영</li>
-                                <li>sentence 분류 모델 생성 및 데이터 파이프라인 구축</li>
-                                <li>LLM 모델 fine tuning을 활용한 vector embedding 검색 구축</li>
-                                <li>모델 품질 관리를 위한 지표 설정 및 모니터링</li>
-                                <li>퍼널 분석을 위한 사용자 및 상품 시각화 대시보드 개발</li>
-                                <li><strong>Skill Keywords</strong>
-                                    <ul class="skill-badges">
-                                        <li>
-                                            <span class="badge badge-secondary">Python</span>
-                                            <span class="badge badge-secondary">FastAPI</span>
-                                            <span class="badge badge-secondary">PostgreSQL</span>
-                                            <span class="badge badge-secondary">AWS Athena</span>
-                                            <span class="badge badge-secondary">BigQuery</span>
-                                            <span class="badge badge-secondary">Airflow</span>
-                                            <span class="badge badge-secondary">CI/CD (Docker / GitHub Actions / Azure Pipeline / ArgoCD)</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
-                    <!-- 해줌 -->
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <div class="row">
-                                <div class="col-md-12 col">
-                                    <h4 class="gray">2019. 03. 04 ~ 2022. 09. 03</h4>
-                                </div>
-                                <div class="col-md-12 col-3 text-center text-md-right">
-                                    <span class="badge badge-info">3년 7개월</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>해줌 (Haezoom)</h4>
-                            <i class="gray">데이터 관리팀 백엔드 개발자</i>
-                            <ul class="pt-3">
-                                <li>태양광 생산성 예측 및 태양광 예측 지도 제공</li>
-                                <li>한국기상데이터 / 한국전력데이터 / 발전소별 태양광 발전량 데이터 파이프라인 구축</li>
-                                <li>RE100 기업 경영 관리 서비스 API 개발 및 운영</li>
-                                <li><strong>Skill Keywords</strong>
-                                    <ul class="skill-badges">
-                                        <li>
-                                            <span class="badge badge-secondary">Python</span>
-                                            <!-- [수정] framwork -> Framework -->
-                                            <span class="badge badge-secondary">Django Framework</span>
-                                            <span class="badge badge-secondary">PostgreSQL</span>
-                                            <span class="badge badge-secondary">Amazon Web Service</span>
-                                            <span class="badge badge-secondary">HTTP API</span>
-                                            <span class="badge badge-secondary">Infrastructure Architecture</span>
-                                            <span class="badge badge-secondary">CI/CD (Docker / Jenkins)</span>
-                                            <span class="badge badge-secondary">Airflow</span>
-                                            <span class="badge badge-secondary">Fluentd</span>
-                                            <span class="badge badge-secondary">Zeppelin</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
-                    <!-- 슬로그업 -->
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <div class="row">
-                                <div class="col-md-12 col">
-                                    <h4 class="gray">2016. 10. 01 ~ 2018. 09. 30</h4>
-                                </div>
-                                <div class="col-md-12 col-3 text-center text-md-right">
-                                    <span class="badge badge-info">2년</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>슬로그업 (Slogup)</h4>
-                            <i class="gray">개발팀 백엔드 개발자</i>
-                            <ul class="pt-3">
-                                <li>O2O 에어컨 설치 스타트업</li>
-                                <li>커머스, 물류 백엔드, 인프라 개발 등</li>
-                                <li>Development Project Management</li>
-                                <li><strong>Skill Keywords</strong>
-                                    <ul class="skill-badges">
-                                        <li>
-                                            <span class="badge badge-secondary">Node.js</span>
-                                            <span class="badge badge-secondary">Express</span>
-                                            <span class="badge badge-secondary">AngularJS</span>
-                                            <span class="badge badge-secondary">MySQL / MariaDB</span>
-                                            <!-- [수정] Serivce -> Service -->
-                                            <span class="badge badge-secondary">Amazon Web Service</span>
-                                            <span class="badge badge-secondary">MongoDB</span>
-                                            <span class="badge badge-secondary">Socket.io</span>
-                                            <span class="badge badge-secondary">Nginx</span>
-                                            <!-- [수정] "API Design" 배지가 2번 중복되어 하나 삭제 -->
-                                            <span class="badge badge-secondary">API Design</span>
-                                            <span class="badge badge-secondary">Database Design</span>
-                                            <span class="badge badge-secondary">Infrastructure Architecture</span>
-                                            <span class="badge badge-secondary">Domain Driven Design</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
-                    <!-- 씸플 -->
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <div class="row">
-                                <div class="col-md-12 col">
-                                    <h4 class="gray">2014. 07. 09 ~ 2016. 03</h4>
-                                </div>
-                                <div class="col-md-12 col-3 text-center text-md-right">
-                                    <span class="badge badge-info">1년 9개월</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>씸플 (Cimple)</h4>
-                            <i class="gray">소프트웨어 개발팀 서버 개발자</i>
-                            <ul class="pt-3">
-                                <li>블로그 서비스 스타트업</li>
-                                <li>백엔드 개발</li>
-                                <li>인프라 엔지니어링과 보안 담당</li>
-                                <li>AWS, Agile 등 연구 / 도입</li>
-                                <li>Development Project Management</li>
-                                <li><strong>Skill Keywords</strong>
-                                    <ul class="skill-badges">
-                                        <li>
-                                            <span class="badge badge-secondary">PHP</span>
-                                            <!-- [수정] frameWork -> Framework -->
-                                            <span class="badge badge-secondary">Phalcon Framework</span>
-                                            <span class="badge badge-secondary">Python</span>
-                                            <span class="badge badge-secondary">Django Framework</span>
-                                            <span class="badge badge-secondary">AWS</span>
-                                            <span class="badge badge-secondary">MySQL / MariaDB</span>
-                                            <span class="badge badge-secondary">MVC</span>
-                                            <!-- [수정] Security Infomation -> Information Security -->
-                                            <span class="badge badge-secondary">Information Security</span>
-                                            <span class="badge badge-secondary">Server Engineering</span>
-                                            <!-- [수정] Databsae -> Database -->
-                                            <span class="badge badge-secondary">Database Design</span>
-                                            <span class="badge badge-secondary">Infrastructure Architecture</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
+                <div class="col-md-3 col-12 text-md-right"><h4 class="gray">2022. 09 ~ 2024. 10</h4></div>
+                <div class="col-md-9 col-12">
+                    <h4>이마트 챗봇 및 채팅 관리자 서비스</h4>
+                    <ul class="pt-2"><li><a href="https://www.microsoft.com/ko-kr/customers/story/1746248878155246554-shinsegae-azure-devops-retailers-ko-korea" target="_blank" rel="noopener noreferrer">관련 기사</a></li><li>챗봇 FAQ 모델 인퍼런스 서버를 운영했습니다(MAU 50만)</li><li>MLOps를 구축해 배포 단계 시간을 80% 줄였습니다</li><li>상담 내역 자동 분류로 상담사 업무 7 M/M을 줄이고 카테고리 분석에 활용했습니다</li></ul>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- ===================== Experience End ===================== -->
-
-    <!-- ===================== Project Start ===================== -->
-    <!-- [수정] 프로젝트 순서를 시작일 기준 내림차순으로 재정렬했습니다.
-         (기존: 2017.12 → 2018.01 → 2017.04 → ... → 2014.10 → 2015.07 → 2014.08 로 뒤섞여 있었음) -->
-    <div class="row pt-5">
-        <div class="col">
-            <div class="row pb-3">
-                <div class="col">
-                    <h2 class="blue">PROJECTS</h2>
-                </div>
-            </div>
-
+            <hr/>
             <div class="row">
-                <div class="col">
-
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <h4 class="gray">2022. 09 ~ 2024. 10</h4>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>이마트 챗봇 및 채팅 관리자 서비스</h4>
-                            <ul class="pt-3">
-                                <li>
-                                    <strong>API Server</strong>
-                                    <ul>
-                                        <li><a href="https://www.microsoft.com/ko-kr/customers/story/1746248878155246554-shinsegae-azure-devops-retailers-ko-korea" target="_blank" rel="noopener noreferrer">관련 기사</a></li>
-                                        <li>이마트 / 트레이더스 / 노브랜드 챗봇 서비스 모델 개발 및 운영</li>
-                                        <li>챗봇 FAQ 모델 인퍼런스 서버 운영(MAU 50만) 및 MLOps 구축으로 배포 단계 80% 시간 단축</li>
-                                        <li>분류 모델을 통한 상담 내역 자동 분류로 상담사 7 M/M 단축 및 카테고리 데이터 분석 활용</li>
-                                        <li>챗봇 / 채팅 / 음성 상담 내용 데이터 파이프라인 및 대시보드(일 평균 1만 건) 개발</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <h4 class="gray">2019. 03 ~ 2022. 08</h4>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>발전량 예측 백엔드 개발</h4>
-                            <ul class="pt-3">
-                                <li>
-                                    <strong>API Server</strong>
-                                    <ul>
-                                        <li><a href="https://haezoom.io/api/" target="_blank" rel="noopener noreferrer">홈페이지</a></li>
-                                        <li>날씨 예측 알고리즘을 통한 태양광 발전량 예측 알고리즘 연동</li>
-                                        <!-- [수정] postgresSQL -> PostgreSQL -->
-                                        <li>Python / Django / PostgreSQL을 사용하여 개발</li>
-                                        <li>OpenAPI 2.0 규격에 맞는 Swagger API 문서 작성</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <strong>Preprocess</strong>
-                                    <ul>
-                                        <li>CI/CD 구축 및 통합 테스트 / 배포 자동화</li>
-                                        <li>Global Forecast System(GFS) / LDAPS 등 기상 데이터 추출 및 가공 전처리</li>
-                                        <li>실시간 날씨 예측을 위한 천리안2 데이터 파이프라인 구축</li>
-                                        <li>이상 감지를 통한 데이터 오류 관리</li>
-                                        <li>하루 250GB의 기상 데이터 처리 및 보관</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <h4 class="gray">2018. 01 ~ 2018. 04</h4>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>Femtofab</h4>
-                            <ul class="pt-3">
-                                <li><a href="https://www.smartdrop.co.kr/" target="_blank" rel="noopener noreferrer">홈페이지</a></li>
-                                <li>환자의 혈액 데이터를 통한 질병 통계 예측 서비스</li>
-                                <li>Node.js + MySQL / AngularJS를 사용하여 개발</li>
-                                <li>점도 계산 통계식 구축 및 최적화 계산을 위한 경사하강법 구현</li>
-                                <li>계산식 최적화를 위한 클러스터링 연산 구축</li>
-                                <li>클라이언트에 제공되는 엑셀 / CSV / 그래프 등 다양한 화면 구성</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <h4 class="gray">2017. 12 ~ 2018. 09</h4>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>쓱싹 백엔드 / 프론트엔드 개발</h4>
-                            <ul class="pt-3">
-                                <li>
-                                    <strong>API Server / View Page</strong>
-                                    <ul>
-                                        <li><a href="https://sgsg.slogup.com/" target="_blank" rel="noopener noreferrer">홈페이지</a></li>
-                                        <li>에어컨 / 보일러 / 도어락 / 벽걸이 TV 설치 온라인 견적 O2O 서비스 개발</li>
-                                        <li>어드민 화면 및 통계 화면, 설치 신청 및 제품 구매 페이지</li>
-                                        <li>마이크로 서비스로의 개선 및 API 추가 개발</li>
-                                        <li>세틀뱅크(PG) 결제 연동 및 기사 신청 하이브리드 앱 등의 프론트엔드</li>
-                                        <li>반응형 웹사이트 최적화</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <strong>Blog SQS Server</strong>
-                                    <ul>
-                                        <li>네이버 / 티스토리 블로그 API 연동 및 전송 로직 서버 클러스터링 백엔드 개발</li>
-                                        <li>Node.js, Socket.io, Express.js를 사용하여 개발</li>
-                                        <li>MongoDB를 이용한 텍스트 기반 데이터 활용</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <h4 class="gray">2017. 04 ~ 2017. 10</h4>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>PONGIFT 프로젝트</h4>
-                            <ul class="pt-3">
-                                <li><a href="https://main.pongift.com/" target="_blank" rel="noopener noreferrer">홈페이지</a></li>
-                                <li>모바일 기프트 쿠폰 플랫폼 개발</li>
-                                <li>Node.js + MySQL / AngularJS를 사용하여 개발</li>
-                                <li>네이버 스토어팜 / 옥션 상품 판매 연동</li>
-                                <li>상품 및 MMS 이미지 실시간 생성 및 가공</li>
-                                <li>MMS 발송 서드파티 추가 및 기타 화면 및 성능 개선</li>
-                                <li>플랫 디자인을 통한 세련된 레이아웃 디자인 개발</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <h4 class="gray">2016. 12 ~ 2017. 03</h4>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>IMS ANALYTICS</h4>
-                            <ul class="pt-3">
-                                <li>대량 발송 홍보 메시지 데이터 분석 솔루션</li>
-                                <li>Node.js + MySQL / AngularJS를 사용하여 개발</li>
-                                <li>문자 발송 시스템 연동 및 통계 시스템 구축</li>
-                                <li>클라이언트 반응형 및 통계 데이터 그래프 표현</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <h4 class="gray">2015. 12 ~ 2016. 03</h4>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>POSTYPE</h4>
-                            <ul class="pt-3">
-                                <li><a href="https://www.postype.com/" target="_blank" rel="noopener noreferrer">홈페이지</a></li>
-                                <li>창작가들이 자신의 작품으로 수익 활동을 할 수 있는 1인 미디어 플랫폼 구축</li>
-                                <li>PHP + Phalcon + MariaDB를 사용하여 개발</li>
-                                <li>서비스의 앱 API 및 알림 서비스 개발</li>
-                                <li>추천 시스템(User based CF) 구축 및 개발 / DB 쿼리 튜닝 및 정규화 시행</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <h4 class="gray">2015. 07 ~ 2015. 09</h4>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>인블룸</h4>
-                            <ul class="pt-3">
-                                <li>사용자가 2D 패턴을 생성하면 해당 패턴을 3D 프린터로 결과물로 만들어내는 서비스</li>
-                                <li>WordPress, PHP, MySQL 등을 사용하여 서비스 개발</li>
-                                <li>커스터마이징 심볼 주얼리 브랜드 플랫폼 서비스 구현</li>
-                                <li>2D / 3D 제작 이해 및 물리 엔진 적용</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <h4 class="gray">2014. 10 ~ 2014. 12</h4>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>트래블링 아울</h4>
-                            <ul class="pt-3">
-                                <li><a href="https://www.tripadvisor.co.kr/Attraction_Review-g294197-d11965035-Reviews-Private_Day_Tour_traveling_owl-Seoul.html" target="_blank" rel="noopener noreferrer">홈페이지</a></li>
-                                <li>외국인을 위한 한국 관광 서비스 플랫폼(외국인을 위한 마이리얼트립)</li>
-                                <li>Python + Django + MySQL을 사용하여 개발</li>
-                                <li>사진 이미지가 사용자 화면 사이즈에 최적화되도록 이미지 자동 조정 스크립트 작성</li>
-                                <li>결제 시스템(PayPal) 연동 및 Google Map API를 이용한 지도 서비스 구현</li>
-                                <li>플랫 디자인을 통한 세련된 레이아웃 디자인 개발</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <h4 class="gray">2014. 08 ~ 2014. 10</h4>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>그라모</h4>
-                            <ul class="pt-3">
-                                <li>리워드 앱(포인트 적립을 통한 쿠폰 사용)</li>
-                                <li>Python + Django + MySQL을 사용하여 개발</li>
-                                <li>국내외 광고 연동(TrialPay / Adpopcorn / TNK / Fyber / Linkprice) 콜백 구현</li>
-                                <li>국내 쿠폰 발급(inumber) 연동</li>
-                                <!-- [수정] "콜배" -> "콜백" -->
-                                <li>자체 광고 서비스 및 콜백 구현(타 브라우저에서 콜백을 통한 적립 가능)</li>
-                                <li>c3.js 커스텀을 통한 광고 수익 그래프 화면 개발</li>
-                                <li>플랫 디자인을 통한 세련된 레이아웃 디자인 개발</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr/>
-
-                    <!-- ---------- 개인 프로젝트 ---------- -->
-                    <div class="row">
-                        <div class="col-md-3 col-12 text-md-right">
-                            <h4 class="gray">개인 프로젝트</h4>
-                        </div>
-                        <div class="col-md-9 col-12">
-                            <h4>xyflow를 이용한 프롬프트 및 생성 AI를 위한 CMS <small class="gray">(2024년)</small></h4>
-                            <ul class="pt-3">
-                                <li><a href="https://vimeo.com/942257386" target="_blank" rel="noopener noreferrer">데모 버전 동영상</a></li>
-                                <li>라벨러와 기획자의 반복 작업을 없애기 위해 진행(라벨링 / 예측값 측정 등)</li>
-                                <li>xyflow를 이용한 ML 단계별 결과 도출 시각화</li>
-                                <li>토크나이저와 예측 ML의 API화를 통해 사용자가 간편하게 사용하도록 UI 설계</li>
-                                <li>사용자가 원하는 만큼의 테스트를 조합한 후 알림으로 받을 수 있음(메일 / Teams)</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row pt-4">
-                        <div class="col-md-3 col-12 text-md-right"></div>
-                        <div class="col-md-9 col-12">
-                            <h4>Stable Diffusion을 이용한 영상 / 음성 가공 <small class="gray">(2024년)</small></h4>
-                            <ul class="pt-3">
-                                <li><a href="https://uiandwe.tistory.com/1422" target="_blank" rel="noopener noreferrer">상세 설명</a></li>
-                                <li>YOLOv8을 이용한 이미지 검출 분류</li>
-                                <li>마스킹 처리된 이미지를 Stable Diffusion을 이용해 생성</li>
-                                <li>RVC를 이용한 음성 합성</li>
-                                <li>이미지와 음성을 합쳐 영상화</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row pt-4">
-                        <div class="col-md-3 col-12 text-md-right"></div>
-                        <div class="col-md-9 col-12">
-                            <h4>Object Detection Album <small class="gray">(2022년)</small></h4>
-                            <ul class="pt-3">
-                                <li><a href="https://github.com/uiandwe/object-detection" target="_blank" rel="noopener noreferrer">소스 및 설명</a></li>
-                                <li>YOLOv5를 이용한 이미지 검출 분류</li>
-                                <li>Python + Django + YOLOv5를 사용하여 개발</li>
-                                <li>여러 오픈된 모델에 대한 트레이닝 및 적용</li>
-                                <li>ML 학습 및 API 제공</li>
-                                <li>이미지 검출의 실무 적용 가능한 사례 도출</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row pt-4">
-                        <div class="col-md-3 col-12 text-md-right"></div>
-                        <div class="col-md-9 col-12">
-                            <h4>시계열 데이터 이상 감지 <small class="gray">(2021년)</small></h4>
-                            <ul class="pt-3">
-                                <li><a href="https://uiandwe.tistory.com/1319" target="_blank" rel="noopener noreferrer">소스 및 설명</a></li>
-                                <li>기상 데이터(시계열)의 일정한 패턴에서 이상치를 감지</li>
-                                <li>Isolation Forest를 통한 과거 데이터 이상치 학습</li>
-                                <li>LSTM을 통한 미래 데이터 결과값 예측</li>
-                                <li>과거 3년치 학습 데이터를 통한 이상치 발견 학습 모델 구축</li>
-                                <li>API 서비스 결과값에 대한 validation으로 활용</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row pt-4">
-                        <div class="col-md-3 col-12 text-md-right"></div>
-                        <div class="col-md-9 col-12">
-                            <h4>SMI to DFXP <small class="gray">(2017년)</small></h4>
-                            <ul class="pt-3">
-                                <li><a href="https://github.com/uiandwe/dfxp" target="_blank" rel="noopener noreferrer">소스 및 설명</a></li>
-                                <li><del>넷플릭스의 국내 진출(2017년)로 사이트 종료</del></li>
-                                <li>자막 파일 SMI를 웹용 자막 파일인 DFXP로 변환해 주는 사이트</li>
-                                <li>SMI 파일 파싱을 통한 DFXP 파일 변환</li>
-                                <li>다양한 한글 인코딩 제공(UTF-8 / ISO-8859-2 / CP949)</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row pt-4">
-                        <div class="col-md-3 col-12 text-md-right"></div>
-                        <div class="col-md-9 col-12">
-                            <h4>문장의 긍정 / 부정 분석 <small class="gray">(2016년)</small></h4>
-                            <ul class="pt-3">
-                                <li><a href="https://github.com/uiandwe/Naive-Bayes-classification" target="_blank" rel="noopener noreferrer">소스 및 설명</a></li>
-                                <li>해당 문장이 긍정인지 부정인지를 조건부 확률로 판단</li>
-                                <li>조건부 확률을 통한 그룹(긍정 / 부정) 선택</li>
-                                <li>KoNLPy로 한글 형태소 분석</li>
-                                <li>네이버 사전을 통한 긍정 4,000단어, 부정 3,000단어 추출 및 분석</li>
-                            </ul>
-                        </div>
-                    </div>
-
+                <div class="col-md-3 col-12 text-md-right"><h4 class="gray">2019. 03 ~ 2022. 08</h4></div>
+                <div class="col-md-9 col-12">
+                    <h4>태양광 발전량 예측 API</h4>
+                    <ul class="pt-2"><li><a href="https://haezoom.io/api/" target="_blank" rel="noopener noreferrer">홈페이지</a></li><li>GFS와 LDAPS 그리고 천리안2 기상 데이터를 추출하고 전처리하는 파이프라인을 만들었습니다</li><li>하루 250GB의 기상 데이터를 처리하고 보관했습니다</li><li>OpenAPI 2.0 규격으로 Swagger API 문서를 작성했습니다</li></ul>
                 </div>
             </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-3 col-12 text-md-right"><h4 class="gray">2014 ~ 2018</h4></div>
+                <div class="col-md-9 col-12">
+                    <h4>초기 경력 프로젝트</h4>
+                    <ul class="pt-2"><li><a href="https://sgsg.slogup.com/" target="_blank" rel="noopener noreferrer">쓱싹</a> 가전 설치 온라인 견적 O2O 서비스 (2017~2018)</li><li><a href="https://www.smartdrop.co.kr/" target="_blank" rel="noopener noreferrer">Femtofab</a> 혈액 데이터 기반 질병 통계 예측 서비스 (2018)</li><li><a href="https://main.pongift.com/" target="_blank" rel="noopener noreferrer">PONGIFT</a> 모바일 기프트 쿠폰 플랫폼 (2017)</li><li>IMS Analytics 대량 발송 메시지 데이터 분석 솔루션 (2016~2017)</li><li><a href="https://www.postype.com/" target="_blank" rel="noopener noreferrer">POSTYPE</a> 창작자 1인 미디어 플랫폼과 추천 시스템 (2015~2016)</li><li>인블룸 2D 패턴 기반 3D 프린팅 주얼리 서비스 (2015)</li><li>트래블링 아울 외국인 대상 한국 관광 플랫폼 (2014)</li><li>그라모 리워드 앱과 광고 콜백 연동 (2014)</li></ul>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-3 col-12 text-md-right"><h4 class="gray">개인 프로젝트</h4></div>
+                <div class="col-md-9 col-12">
+                    
+                    <ul class="pt-2"><li><strong>xyflow 기반 생성 AI용 CMS (2024)</strong> <a href="https://vimeo.com/942257386" target="_blank" rel="noopener noreferrer">데모 영상</a> 라벨러와 기획자의 반복 작업을 줄이려고 ML 단계별 결과를 시각화하는 도구를 만들었습니다</li><li><strong>Stable Diffusion 영상과 음성 가공 (2024)</strong> <a href="https://uiandwe.tistory.com/1422" target="_blank" rel="noopener noreferrer">상세 설명</a> YOLOv8 검출과 Stable Diffusion 생성 그리고 RVC 음성 합성을 묶었습니다</li><li><strong>Object Detection Album (2022)</strong> <a href="https://github.com/uiandwe/object-detection" target="_blank" rel="noopener noreferrer">소스</a> YOLOv5로 이미지를 검출하고 분류하는 앨범 서비스입니다</li><li><strong>시계열 데이터 이상 감지 (2021)</strong> <a href="https://uiandwe.tistory.com/1319" target="_blank" rel="noopener noreferrer">상세 설명</a> Isolation Forest와 LSTM으로 기상 데이터 이상치를 찾았습니다</li></ul>
+                </div>
+            </div>
+            <hr/>
         </div>
     </div>
-    <!-- ===================== Project End ===================== -->
-
-    <!-- ===================== Certified Start ===================== -->
-    <!--
-      [핵심 수정] 기존 4개의 2열 row -> 반응형 카드 그리드 1개로 통합
-        - style="width:100%;height:100%" 전부 제거
-        - loading="lazy" + alt 텍스트 추가 (기존 8장 모두 alt 없었음)
-        - 이미지만 있고 텍스트가 없어서 이미지 실패 시 정보가 0이었던 문제 -> 캡션 추가
-        - Credly 배지는 URL의 size/680x680 -> size/340x340 으로 축소본 사용
-      [남은 최적화] google-cloud-1.png(872KB), google-cloud-2.png(1.1MB) 는
-        폭 800px 로 리사이즈 + WebP 변환하면 각각 100KB 이하로 줄어듭니다.
-    -->
     <div class="row pt-5">
         <div class="col">
             <div class="row pb-3">
@@ -922,7 +402,7 @@
                     </div>
                     <span class="cert-caption">
                         Neo4j Certified Professional
-                        <span class="cert-org">Neo4j GraphAcademy · 2025.01</span>
+                        <span class="cert-org">Neo4j GraphAcademy 2025.01</span>
                     </span>
                 </div>
 
@@ -953,7 +433,7 @@
                     </div>
                     <span class="cert-caption">
                         Data Streaming Engineer : Foundations
-                        <span class="cert-org">Confluent 교육 배지 · 2026.09</span>
+                        <span class="cert-org">Confluent 교육 배지 2026.09</span>
                     </span>
                 </div>
                 
@@ -963,7 +443,7 @@
                     </div>
                     <span class="cert-caption">
                         Data Streaming Engineer : Apache Flink
-                        <span class="cert-org">Confluent 교육 배지 · 2026.09</span>
+                        <span class="cert-org">Confluent 교육 배지 2026.09</span>
                     </span>
                 </div>
 
@@ -972,9 +452,6 @@
             </div>
         </div>
     </div>
-    <!-- ===================== Certified End ===================== -->
-
-    <!-- ===================== Education Start ===================== -->
     <div class="row pt-5">
         <div class="col">
             <div class="row pb-3">
@@ -997,11 +474,6 @@
             </div>
         </div>
     </div>
-    <!-- ===================== Education End ===================== -->
-
-    <!-- ===================== Toolbox Start ===================== -->
-    <!-- [수정] alert('뇌내망상 코너는 준비 중입니다.') 버튼 제거.
-         이력서에서 "준비 중" 버튼은 감점 요인이라 블로그 링크 + 인쇄(PDF 저장) 버튼으로 교체했습니다. -->
     <div class="row pl-md-5 pr-md-5 pt-5 pb-0 no-print">
         <div class="col-md-4 pt-3">
             <a href="mailto:uiandwe@gmail.com" class="btn btn-secondary btn-block" role="button">
@@ -1020,26 +492,20 @@
             </button>
         </div>
     </div>
-    <!-- ===================== Toolbox End ===================== -->
-
-    <!-- ===================== Footer Start ===================== -->
     <div class="row">
         <div class="col footer-cover">
             <div class="footer text-center">
-                <small>CSS by <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap 4</a>.</small><br/>
-                <!-- [수정] 2019.05.18 로 박제되어 있던 날짜 갱신 -->
-                <small>Last Modified at 2026.10.06,
-                    <a href="https://github.com/uiandwe/uiandwe.github.com" target="_blank" rel="noopener noreferrer">Update Note</a> ·
+                <small>CSS by <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap 4</a></small><br/>
+                <small>Last Modified at 2026.10.06 /
+                    <a href="https://github.com/uiandwe/uiandwe.github.com" target="_blank" rel="noopener noreferrer">Update Note</a> /
                     <a href="https://github.com/uiandwe/uiandwe.github.com" target="_blank" rel="noopener noreferrer">
                         <i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
                 </small>
             </div>
         </div>
     </div>
-    <!-- ===================== Footer End ===================== -->
-</div>
+    </div>
 
-<!-- [수정] 인라인 onclick 대신 이벤트 리스너 사용 (CSP 적용 시에도 안전) -->
 <script>
     document.getElementById('btn-print').addEventListener('click', function () {
         window.print();
