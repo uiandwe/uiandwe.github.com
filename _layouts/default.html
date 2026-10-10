@@ -271,12 +271,13 @@
                         <div class="col-12 col-sm-4">
                             <ul>
                                 <li>MySQL / MariaDB</li>
-                                <li>Kafka / Flink / ksqlDB</li>
+                                <li>Kafka / Kafka Connect / ksqlDB</li>
+                                <li>Debezium / GCP Pub/Sub</li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-4">
                             <ul>
-                                <li>BigQuery</li>
+                                <li>BigQuery / Trino</li>
                                 <li>Airflow / dbt / Airbyte</li>
                             </ul>
                         </div>
@@ -346,35 +347,41 @@
                             <h4>NBT</h4>
                             <i class="gray">DevOps팀 / 데이터 엔지니어</i>
                             <ul class="pt-3">
-                                <li>국내/해외(10개국) 서비스의 데이터 수집 및 적재</li>
-                                <li>실시간 데이터 관리, 어뷰징 알림 설정, 데이터 리터러시 및 리니지 관리</li>
-                                <li>Airflow / Airbyte / dbt / Embulk 기반 MySQL → BigQuery 적재 파이프라인 운영</li>
-                                <li>Kafka → Elasticsearch → Kibana / Redash 로그 수집 및 시각화 파이프라인 운영</li>
-                                <li>광고 성과 지표 이상 징후 탐지 및 Slack / Google Chat 실시간 알림 자동화</li>
+                                <li>일 6TB · 초당 3,800건 규모 광고 postback 로그와 서비스 DB 데이터의 수집·적재 플랫폼 운영 (국내/해외 10개국)</li>
+                                <li>VM → GKE 로그 파이프라인 이관 중 3개 프로젝트 담당. Fluentd · Logstash를 Vector로 통합해 수집기 재시작률 90% 감소, 처리량 3배 향상</li>
+                                <li>Logstash 기반 Elasticsearch 적재를 Kafka Connect로 전환. 필드 구조 변환이 필요한 일부 로그는 비용·속도 비교 후 Logstash 유지</li>
+                                <li>Jenkins 잡 500개를 성격별로 분리: MySQL → BigQuery 배치 250개는 Airflow로, 로그 적재 250개는 Kafka Connect 스트리밍으로 이관</li>
+                                <li>postback 페이로드 3배 급증으로 수집기 pod 10개가 1시간에 40회 OOM 재시작. 오토스케일 적용 상태에서도 pod 메모리 한도가 병목임을 메트릭으로 규명하고 리소스 재산정(128MB → 512MB)과 읽기 배치 조정으로 안정화, 데이터 유실 0건</li>
+                                <li>Kafka Connect 커스텀 Sink(Java 11) 개발로 로그를 GCS Parquet로 적재, Kafka → ClickHouse 실시간 적재 구축(칩스)</li>
+                                <li>BigQuery 비용 이상 탐지(비용 상위 쿼리, 예약 쿼리 스캔 변화, 스토리지 사용 주기)와 미사용 스토리지 정리로 월 운영 비용 절감</li>
+                                <li>BigQuery 쿼리 비용 분석 도구 단독 개발: 상위 쿼리 자동 추출 → 튜닝안 측정·결과 대조. 채택 쿼리 스캔 −99.1%, 실행 시간 −90.1%, 결과 차이 0건</li>
+                                <li>Airflow 2 → 3 업그레이드 및 메타 DB Cloud SQL Postgres 이전. 잡 단위 DAG를 프로젝트당 1개로 재구성해 DAG 63개(task 535개)로 통합</li>
+                                <li>Kafka + ksqlDB 실시간 알림으로 장애 탐지 지연 분 → 초 단위 단축</li>
+                                <li>Spark 적재 레이어 도입을 PoC로 검토, 해당 규모에서 비용 대비 효과가 낮아 BigQuery 중심 구조 유지</li>
+                                <li>DataHub 1년 운영 후 낮은 사용 빈도와 BigQuery 메타데이터 규모 대비 리소스 한계를 확인하고 운영 종료</li>
                                 <li>관련 업체 [네이버 웹툰 / 네이버 페이 / 토스 / 탭조이 / 리디 / 배민 등]</li>
-                                <!--
-                                  [수정] 아래 2줄은 신세계 경력과 완전히 동일한 문장이 복붙되어 있어 삭제했습니다.
-                                    - "모델 품질 관리를 위한 지표 설정 및 모니터링"
-                                    - "퍼널 분석을 위한 사용자 및 상품 시각화 대시보드 개발"
-                                  NBT에서도 실제로 하신 일이라면, 신세계 쪽과 문구를 다르게 구체화해서 다시 넣으세요.
-                                -->
                                 <li><strong>Skill Keywords</strong>
                                     <ul class="skill-badges">
                                         <li>
                                             <span class="badge badge-secondary">BigQuery</span>
-                                            <span class="badge badge-secondary">Kafka / Flink / ksqlDB</span>
-                                            <span class="badge badge-secondary">Airflow / dbt / Airbyte</span>
+                                            <span class="badge badge-secondary">Kafka / Kafka Connect / ksqlDB</span>
+                                            <span class="badge badge-secondary">Debezium</span>
+                                            <span class="badge badge-secondary">GCP Pub/Sub</span>
+                                            <span class="badge badge-secondary">Airflow 3 / dbt / Airbyte</span>
                                             <span class="badge badge-secondary">Embulk</span>
+                                            <span class="badge badge-secondary">Java</span>
+                                            <span class="badge badge-secondary">ClickHouse</span>
+                                            <span class="badge badge-secondary">Cloud SQL</span>
                                             <span class="badge badge-secondary">Jenkins</span>
                                             <span class="badge badge-secondary">MySQL</span>
-                                            <!-- [확인필요] 원본의 "ex gernater" 오타. 정확한 도구명으로 바꿔 주세요 -->
-                                            <span class="badge badge-secondary">Expectations / Generator</span>
                                             <span class="badge badge-secondary">Redash</span>
+                                            <span class="badge badge-secondary">Trino</span>
                                             <span class="badge badge-secondary">DataHub</span>
                                             <span class="badge badge-secondary">logrotate</span>
+                                            <span class="badge badge-secondary">Vector</span>
+                                            <span class="badge badge-secondary">Fluentd</span>
                                             <span class="badge badge-secondary">Logstash</span>
-                                            <span class="badge badge-secondary">ELK</span>
-                                            <span class="badge badge-secondary">GKE</span>
+                                            <span class="badge badge-secondary">Elasticsearch / Kibana</span>
                                             <span class="badge badge-secondary">CI/CD (Docker / GitHub Actions / Azure Pipeline / ArgoCD)</span>
                                         </li>
                                     </ul>
@@ -412,7 +419,6 @@
                                             <span class="badge badge-secondary">FastAPI</span>
                                             <span class="badge badge-secondary">PostgreSQL</span>
                                             <span class="badge badge-secondary">AWS Athena</span>
-                                            <span class="badge badge-secondary">GKE</span>
                                             <span class="badge badge-secondary">BigQuery</span>
                                             <span class="badge badge-secondary">Airflow</span>
                                             <span class="badge badge-secondary">CI/CD (Docker / GitHub Actions / Azure Pipeline / ArgoCD)</span>
@@ -587,7 +593,7 @@
                                     <ul>
                                         <li><a href="https://www.microsoft.com/ko-kr/customers/story/1746248878155246554-shinsegae-azure-devops-retailers-ko-korea" target="_blank" rel="noopener noreferrer">관련 기사</a></li>
                                         <li>이마트 / 트레이더스 / 노브랜드 챗봇 서비스 모델 개발 및 운영</li>
-                                        <li>챗봇 FAQ 모델 인퍼런스 서버 운영(MAU 40만) 및 MLOps 구축으로 배포 단계 80% 시간 단축</li>
+                                        <li>챗봇 FAQ 모델 인퍼런스 서버 운영(MAU 50만) 및 MLOps 구축으로 배포 단계 80% 시간 단축</li>
                                         <li>분류 모델을 통한 상담 내역 자동 분류로 상담사 7 M/M 단축 및 카테고리 데이터 분석 활용</li>
                                         <li>챗봇 / 채팅 / 음성 상담 내용 데이터 파이프라인 및 대시보드(일 평균 1만 건) 개발</li>
                                     </ul>
@@ -902,7 +908,7 @@
                 <div class="col-6 col-md-4 col-lg-3 cert-item">
                     <div class="cert-thumb">
                         <img src="https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
-                             alt="AWS Certified Solutions Architect – Associate 배지" loading="lazy">
+                             alt="AWS Certified Solutions Architect – Associate 인증 배지" loading="lazy">
                     </div>
                     <span class="cert-caption">
                         AWS Certified Solutions Architect – Associate
@@ -943,21 +949,21 @@
 
                 <div class="col-6 col-md-4 col-lg-3 cert-item">
                     <div class="cert-thumb">
-                        <img src="./images/kafka.png" alt="Confluent Data Streaming Engineer Foundations 인증 배지" loading="lazy">
+                        <img src="./images/kafka.png" alt="Confluent Data Streaming Engineer Foundations 교육 배지" loading="lazy">
                     </div>
                     <span class="cert-caption">
                         Data Streaming Engineer : Foundations
-                        <span class="cert-org">Confluent · 2026.09</span>
+                        <span class="cert-org">Confluent 교육 배지 · 2026.09</span>
                     </span>
                 </div>
                 
                 <div class="col-6 col-md-4 col-lg-3 cert-item">
                     <div class="cert-thumb">
-                        <img src="./images/kafka-flank.png" alt="Confluent Data Streaming Engineer Apache Flink 인증 배지" loading="lazy">
+                        <img src="./images/kafka-flank.png" alt="Confluent Data Streaming Engineer Apache Flink 교육 배지" loading="lazy">
                     </div>
                     <span class="cert-caption">
                         Data Streaming Engineer : Apache Flink
-                        <span class="cert-org">Confluent · 2026.09</span>
+                        <span class="cert-org">Confluent 교육 배지 · 2026.09</span>
                     </span>
                 </div>
 
@@ -1022,7 +1028,7 @@
             <div class="footer text-center">
                 <small>CSS by <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap 4</a>.</small><br/>
                 <!-- [수정] 2019.05.18 로 박제되어 있던 날짜 갱신 -->
-                <small>Last Modified at 2026.08.17,
+                <small>Last Modified at 2026.10.06,
                     <a href="https://github.com/uiandwe/uiandwe.github.com" target="_blank" rel="noopener noreferrer">Update Note</a> ·
                     <a href="https://github.com/uiandwe/uiandwe.github.com" target="_blank" rel="noopener noreferrer">
                         <i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
